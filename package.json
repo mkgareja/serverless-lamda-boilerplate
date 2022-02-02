@@ -1,0 +1,15 @@
+{
+  "name": "orderassign",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "request": "^2.88.2",
+    "md5": "^2.3.0"
+  },
+  "license": "ISC",
+  "description": ""
+}

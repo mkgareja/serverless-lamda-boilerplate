@@ -1,0 +1,26 @@
+Description: Order Assign API.
+Resources:
+  orderAssign:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs12.x
+      CodeUri: .
+      Description: 'Order Assign API'
+      MemorySize: 128
+      Timeout: 240
+      Role: 'arn:aws:iam::249437634744:role/SimpliLambdaRoloe'
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-0e6aa2b8b41ccc2ec
+        SubnetIds:
+          - subnet-08fc49f4f3785d21d
+      Environment:
+        Variables:
+          DEFAULT_AWS_REGION: us-east-2 
+          DYNAMO_DB_TABLE_NAME_ORDER: B2bOrders
+          BASE_LMS_URL: apachedev/git/paperclip/public/api/internal/
+          SL_HOST: 'http://dockerv2.simplilearn.com:8881/'
+          BASE_ACCOUNTS_URL : apachedev/git/cloud6/public/internal/enterprise-lms-v1/
+          SSP_TOKEN_METHOD: create-ssp-affiliate-token
+          LMS_SECRET_KEY: 'e387efb54df48f82a038dbf2ebe478d2'
