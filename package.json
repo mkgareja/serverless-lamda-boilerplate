@@ -1,5 +1,5 @@
 {
-  "name": "orderassign",
+  "name": "dashboard",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,9 +7,13 @@
   },
   "author": "",
   "dependencies": {
-    "request": "^2.88.2",
-    "md5": "^2.3.0"
+    "memcached": "^2.2.2",
+    "memcached-cli": "^1.0.3",
+    "request": "^2.88.2"
   },
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "serverless-offline": "^8.4.0"
+  }
 }
