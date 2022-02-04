@@ -3,17 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config ./jest.config.json"
   },
   "author": "",
   "dependencies": {
     "memcached": "^2.2.2",
-    "memcached-cli": "^1.0.3",
     "request": "^2.88.2"
   },
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "jest": "^27.4.7",
+    "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^8.4.0"
   }
 }

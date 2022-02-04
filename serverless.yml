@@ -1,6 +1,7 @@
 service: dashboard
 plugins:
   - serverless-offline
+  - serverless-dotenv-plugin # Load .env as environment variables
 
 provider:
   name: aws
@@ -8,8 +9,16 @@ provider:
   region: eu-central-1
 
 functions:
-    server:
-      handler: index.handler
+    getDashboard:
+      handler: modules/summary/controller.hello
       events:
-      - http: ANY /
-      - https: ANY /
+      - http:
+         path: hello
+         method: get
+  
+    addDashboard:
+      handler: modules/summary/controller.hello
+      events:
+      - http:
+         path: hello
+         method: post
